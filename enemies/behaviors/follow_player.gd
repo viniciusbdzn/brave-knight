@@ -14,6 +14,9 @@ func _ready():
 	
 
 func _physics_process(delta: float) -> void:
+	#Ignorar Game Over
+	if GameManager.is_game_over: return
+	
 	#input vector = vector2 que varia entre -1 e 1 em ambos os eixos
 	#Calcular Direção
 	var player_position = GameManager.player_position
